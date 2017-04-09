@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp"
+    tools:context="com.example.soumyaagarwal.twitterintern.MainActivity"
+    android:background="@drawable/blackbg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/l"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/search"
+        android:hint="Search"
+        android:textCursorDrawable="@null"
+        android:layout_weight="0.99"
+        android:textColor="#ffffff"
+        android:background="@android:color/transparent"
+        android:textColorHint="#ffffff"
+        android:layout_gravity="center"
+        android:padding="2dp"
+        android:layout_margin="1dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:background="@mipmap/ic_search"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:id="@+id/searchtweet" />
+    </LinearLayout>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="2dp"
+    android:background="#9fffffff"
+    android:id="@+id/l1"
+    android:layout_marginBottom="3.5dp"
+    android:layout_below="@+id/l">
+
+</LinearLayout>
+    <LinearLayout android:layout_below="@+id/l1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@id/android:empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="50"
+                android:background="#000"
+                android:padding="20dp" style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:indeterminate="true"
+                android:visibility="gone"/>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end" />
+        </LinearLayout>
+
+        <ListView android:id="@id/android:list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="#e1e8ed"
+            android:dividerHeight="1dp"
+            android:drawSelectorOnTop="false"/>
+    </LinearLayout>
+</RelativeLayout>
